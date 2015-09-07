@@ -2,19 +2,19 @@ import UIKit
 
 class OvalLayer: CAShapeLayer {
   
-  let animationDuration: CFTimeInterval = 0.3
+  let animationDuration: CFTimeInterval = 0.2
     
   
   override init!() {
     super.init()
     fillColor = UIColor.redColor().CGColor
-    path = ovalPathSmall.CGPath
+    //path = ovalPathSmall.CGPath
   }
   
   required init(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  
+  /*
   var ovalPathSmall: UIBezierPath {
     return UIBezierPath(ovalInRect: CGRect(x: 4.5, y: 295.0, width: 0.0, height: 0.0))
   }
@@ -26,7 +26,7 @@ class OvalLayer: CAShapeLayer {
     var ovalPathMedium: UIBezierPath {
         return UIBezierPath(ovalInRect: CGRect(x: 4.5, y: 295.0, width: 25.0, height: 25.0))
     }
-  
+  */
 //  var ovalPathSquishVertical: UIBezierPath {
 //    return UIBezierPath(ovalInRect: CGRect(x: 2.5, y: 20.0, width: 95.0, height: 90.0))
 //  }
@@ -35,10 +35,11 @@ class OvalLayer: CAShapeLayer {
 //    return UIBezierPath(ovalInRect: CGRect(x: 5.0, y: 20.0, width: 90.0, height: 90.0))
 //  }
   
-  func expand() {
+    func expand(initialOval: UIBezierPath, finalOval: UIBezierPath) {
+    
     var expandAnimation: CABasicAnimation = CABasicAnimation(keyPath: "path")
-    expandAnimation.fromValue = ovalPathSmall.CGPath
-    expandAnimation.toValue = ovalPathMedium.CGPath
+    expandAnimation.fromValue = initialOval.CGPath
+    expandAnimation.toValue = finalOval.CGPath
     expandAnimation.duration = animationDuration
     expandAnimation.fillMode = kCAFillModeForwards
     expandAnimation.removedOnCompletion = false
@@ -84,13 +85,13 @@ class OvalLayer: CAShapeLayer {
 //    addAnimation(wobbleAnimationGroup, forKey: nil)
 //  }
   
-  func contract() {
-    var contractAnimation: CABasicAnimation = CABasicAnimation(keyPath: "path")
-    contractAnimation.fromValue = ovalPathLarge.CGPath
-    contractAnimation.toValue = ovalPathMedium.CGPath
-    contractAnimation.duration = animationDuration
-    contractAnimation.fillMode = kCAFillModeForwards
-    contractAnimation.removedOnCompletion = false
-    addAnimation(contractAnimation, forKey: nil)
-  }
+//  func contract() {
+//    var contractAnimation: CABasicAnimation = CABasicAnimation(keyPath: "path")
+//    contractAnimation.fromValue = ovalPathLarge.CGPath
+//    contractAnimation.toValue = ovalPathMedium.CGPath
+//    contractAnimation.duration = animationDuration
+//    contractAnimation.fillMode = kCAFillModeForwards
+//    contractAnimation.removedOnCompletion = false
+//    addAnimation(contractAnimation, forKey: nil)
+//  }
 }
