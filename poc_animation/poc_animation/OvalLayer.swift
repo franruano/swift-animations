@@ -36,16 +36,40 @@ class OvalLayer: CAShapeLayer {
 //  }
   
     func expand(initialOval: UIBezierPath, finalOval: UIBezierPath) {
+        
+        var expandAnimation: CABasicAnimation = CABasicAnimation(keyPath: "path")
+        expandAnimation.fromValue = initialOval.CGPath
+        expandAnimation.toValue = finalOval.CGPath
+        expandAnimation.duration = animationDuration
+        expandAnimation.fillMode = kCAFillModeForwards
+        expandAnimation.removedOnCompletion = false
+        addAnimation(expandAnimation, forKey: nil)
+        
+    }
     
-    var expandAnimation: CABasicAnimation = CABasicAnimation(keyPath: "path")
-    expandAnimation.fromValue = initialOval.CGPath
-    expandAnimation.toValue = finalOval.CGPath
-    expandAnimation.duration = animationDuration
-    expandAnimation.fillMode = kCAFillModeForwards
-    expandAnimation.removedOnCompletion = false
-    addAnimation(expandAnimation, forKey: nil)
+    func move(initialOval: UIBezierPath, finalOval: UIBezierPath) {
+        
+        var expandAnimation: CABasicAnimation = CABasicAnimation(keyPath: "path")
+        expandAnimation.fromValue = initialOval.CGPath
+        expandAnimation.toValue = finalOval.CGPath
+        expandAnimation.duration = animationDuration
+        expandAnimation.fillMode = kCAFillModeForwards
+        expandAnimation.removedOnCompletion = false
+        addAnimation(expandAnimation, forKey: nil)
+        
+    }
     
-  }
+    func hide(initialOval: UIBezierPath, finalOval: UIBezierPath) {
+        
+        var expandAnimation: CABasicAnimation = CABasicAnimation(keyPath: "path")
+        expandAnimation.fromValue = initialOval.CGPath
+        expandAnimation.toValue = finalOval.CGPath
+        expandAnimation.duration = animationDuration+0.5
+        expandAnimation.fillMode = kCAFillModeForwards
+        expandAnimation.removedOnCompletion = false
+        addAnimation(expandAnimation, forKey: nil)
+        
+    }
   
 //  func wobble() {
 //    // 1
