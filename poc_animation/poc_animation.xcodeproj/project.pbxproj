@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A65DA3C31BA56E3F005FA802 /* ArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65DA3C21BA56E3F005FA802 /* ArcLayer.swift */; };
+		A65DA3C41BA570D2005FA802 /* ArcLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65DA3C21BA56E3F005FA802 /* ArcLayer.swift */; };
 		AB0F15251B8DA45C00FE0323 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F15241B8DA45C00FE0323 /* AppDelegate.swift */; };
 		AB0F15271B8DA45C00FE0323 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F15261B8DA45C00FE0323 /* ViewController.swift */; };
 		AB0F152A1B8DA45C00FE0323 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB0F15281B8DA45C00FE0323 /* Main.storyboard */; };
@@ -32,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A65DA3C21BA56E3F005FA802 /* ArcLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcLayer.swift; sourceTree = "<group>"; };
 		AB0F151F1B8DA45C00FE0323 /* poc_animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = poc_animation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB0F15231B8DA45C00FE0323 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB0F15241B8DA45C00FE0323 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +137,7 @@
 		AB0F15451B8DA49A00FE0323 /* Layer */ = {
 			isa = PBXGroup;
 			children = (
+				A65DA3C21BA56E3F005FA802 /* ArcLayer.swift */,
 				ABABDD8C1B90B4A400C4DF05 /* OvalLayer.swift */,
 				ABEAC15E1B8EF681009C6881 /* RectangleNewLayer.swift */,
 			);
@@ -240,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A65DA3C31BA56E3F005FA802 /* ArcLayer.swift in Sources */,
 				ABABDD8D1B90B4A400C4DF05 /* OvalLayer.swift in Sources */,
 				AB0F15471B8DA52300FE0323 /* HolderView.swift in Sources */,
 				AB0F15271B8DA45C00FE0323 /* ViewController.swift in Sources */,
@@ -254,6 +259,7 @@
 			files = (
 				AB0F15481B8DA52300FE0323 /* HolderView.swift in Sources */,
 				ABABDD8E1B90B65A00C4DF05 /* OvalLayer.swift in Sources */,
+				A65DA3C41BA570D2005FA802 /* ArcLayer.swift in Sources */,
 				ABEAC1601B8EF80F009C6881 /* RectangleNewLayer.swift in Sources */,
 				AB0F153B1B8DA45D00FE0323 /* poc_animationTests.swift in Sources */,
 			);
