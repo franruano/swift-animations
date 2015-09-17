@@ -263,51 +263,48 @@ class HolderView: UIView {
             NSTimer.scheduledTimerWithTimeInterval(5.75, target: self, selector: "dropCircleAnimation:", userInfo: 31, repeats: false)
             NSTimer.scheduledTimerWithTimeInterval(5.75, target: self, selector: "dropCircleAnimation:", userInfo: 32, repeats: false)
         }
-//        
         if self.respondsToSelector("hideCircleAnimation:") {
-            NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "dropCircleAnimation:", userInfo: 0, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.05, target: self, selector: "dropCircleAnimation:", userInfo: 1, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.1, target: self, selector: "dropCircleAnimation:", userInfo: 2, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.15, target: self, selector: "dropCircleAnimation:", userInfo: 3, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.20, target: self, selector: "dropCircleAnimation:", userInfo: 4, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.25, target: self, selector: "dropCircleAnimation:", userInfo: 5, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.30, target: self, selector: "dropCircleAnimation:", userInfo: 6, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.35, target: self, selector: "dropCircleAnimation:", userInfo: 7, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 0, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.05 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 1, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.1 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 2, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.15 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 3, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.20 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 4, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.25 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 5, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.30 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 6, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.35 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 7, repeats: false)
             
-            NSTimer.scheduledTimerWithTimeInterval(5.35, target: self, selector: "dropCircleAnimation:", userInfo: 8, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.35, target: self, selector: "dropCircleAnimation:", userInfo: 9, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.35, target: self, selector: "dropCircleAnimation:", userInfo: 10, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.35, target: self, selector: "dropCircleAnimation:", userInfo: 11, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.35 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 8, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.35 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 9, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.35 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 10, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.35 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 11, repeats: false)
             
-            NSTimer.scheduledTimerWithTimeInterval(5.4, target: self, selector: "dropCircleAnimation:", userInfo: 12, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.45, target: self, selector: "dropCircleAnimation:", userInfo: 13, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.5, target: self, selector: "dropCircleAnimation:", userInfo: 14, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.6, target: self, selector: "dropCircleAnimation:", userInfo: 15, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.65, target: self, selector: "dropCircleAnimation:", userInfo: 16, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.4 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 12, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.45 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 13, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.5 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 14, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.6 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 15, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.65 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 16, repeats: false)
             
-            NSTimer.scheduledTimerWithTimeInterval(5.7, target: self, selector: "dropCircleAnimation:", userInfo: 17, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.75, target: self, selector: "dropCircleAnimation:", userInfo: 18, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.75, target: self, selector: "dropCircleAnimation:", userInfo: 19, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.75, target: self, selector: "dropCircleAnimation:", userInfo: 20, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.7 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 17, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.75 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 18, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.75 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 19, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.75 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 20, repeats: false)
             
-            NSTimer.scheduledTimerWithTimeInterval(5.75, target: self, selector: "dropCircleAnimation:", userInfo: 21, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.75, target: self, selector: "dropCircleAnimation:", userInfo: 22, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.75, target: self, selector: "dropCircleAnimation:", userInfo: 23, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.75, target: self, selector: "dropCircleAnimation:", userInfo: 24, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.75, target: self, selector: "dropCircleAnimation:", userInfo: 25, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.75, target: self, selector: "dropCircleAnimation:", userInfo: 26, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.75, target: self, selector: "dropCircleAnimation:", userInfo: 27, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.75, target: self, selector: "dropCircleAnimation:", userInfo: 28, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.75, target: self, selector: "dropCircleAnimation:", userInfo: 29, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.75, target: self, selector: "dropCircleAnimation:", userInfo: 30, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.75, target: self, selector: "dropCircleAnimation:", userInfo: 31, repeats: false)
-            NSTimer.scheduledTimerWithTimeInterval(5.75, target: self, selector: "dropCircleAnimation:", userInfo: 32, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.75 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 21, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.75 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 22, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.75 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 23, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.75 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 24, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.75 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 25, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.75 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 26, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.75 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 27, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.75 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 28, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.75 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 29, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.75 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 30, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.75 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 31, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(5.75 + 0.5, target: self, selector: "hideCircleAnimation:", userInfo: 32, repeats: false)
         }
 
-        
-        
-//        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "drawArc",
-//            userInfo: nil, repeats: false)
+        NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: "drawArc",
+            userInfo: nil, repeats: false)
     }
 
 //    func addCircle(position:NSInteger){
