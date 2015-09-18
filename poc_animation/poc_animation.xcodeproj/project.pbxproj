@@ -17,6 +17,8 @@
 		AB0F153B1B8DA45D00FE0323 /* poc_animationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F153A1B8DA45D00FE0323 /* poc_animationTests.swift */; };
 		AB0F15471B8DA52300FE0323 /* HolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F15461B8DA52300FE0323 /* HolderView.swift */; };
 		AB0F15481B8DA52300FE0323 /* HolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0F15461B8DA52300FE0323 /* HolderView.swift */; };
+		AB25BE2C1BAC5CEE0082CC2F /* arrOval.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB25BE2B1BAC5CEE0082CC2F /* arrOval.swift */; };
+		AB25BE2D1BAC5CEE0082CC2F /* arrOval.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB25BE2B1BAC5CEE0082CC2F /* arrOval.swift */; };
 		ABABDD8D1B90B4A400C4DF05 /* OvalLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABABDD8C1B90B4A400C4DF05 /* OvalLayer.swift */; };
 		ABABDD8E1B90B65A00C4DF05 /* OvalLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABABDD8C1B90B4A400C4DF05 /* OvalLayer.swift */; };
 		ABEAC15F1B8EF681009C6881 /* RectangleNewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABEAC15E1B8EF681009C6881 /* RectangleNewLayer.swift */; };
@@ -46,6 +48,7 @@
 		AB0F15391B8DA45C00FE0323 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB0F153A1B8DA45D00FE0323 /* poc_animationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = poc_animationTests.swift; sourceTree = "<group>"; };
 		AB0F15461B8DA52300FE0323 /* HolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HolderView.swift; sourceTree = "<group>"; };
+		AB25BE2B1BAC5CEE0082CC2F /* arrOval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = arrOval.swift; sourceTree = "<group>"; };
 		ABABDD8C1B90B4A400C4DF05 /* OvalLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OvalLayer.swift; sourceTree = "<group>"; };
 		ABEAC15E1B8EF681009C6881 /* RectangleNewLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectangleNewLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				AB0F15461B8DA52300FE0323 /* HolderView.swift */,
+				AB25BE2B1BAC5CEE0082CC2F /* arrOval.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -245,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A65DA3C31BA56E3F005FA802 /* ArcLayer.swift in Sources */,
+				AB25BE2C1BAC5CEE0082CC2F /* arrOval.swift in Sources */,
 				ABABDD8D1B90B4A400C4DF05 /* OvalLayer.swift in Sources */,
 				AB0F15471B8DA52300FE0323 /* HolderView.swift in Sources */,
 				AB0F15271B8DA45C00FE0323 /* ViewController.swift in Sources */,
@@ -258,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB0F15481B8DA52300FE0323 /* HolderView.swift in Sources */,
+				AB25BE2D1BAC5CEE0082CC2F /* arrOval.swift in Sources */,
 				ABABDD8E1B90B65A00C4DF05 /* OvalLayer.swift in Sources */,
 				A65DA3C41BA570D2005FA802 /* ArcLayer.swift in Sources */,
 				ABEAC1601B8EF80F009C6881 /* RectangleNewLayer.swift in Sources */,
