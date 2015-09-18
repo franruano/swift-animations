@@ -7,7 +7,7 @@ class RectangleNewLayer: CAShapeLayer {
     
   override init!() {
     super.init()
-    fillColor = UIColor.clearColor().CGColor
+    fillColor = UIColor.blackColor().CGColor
     lineWidth = 7.0
     path = rectangleLargePathFull.CGPath
   }

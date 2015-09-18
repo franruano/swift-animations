@@ -7,8 +7,7 @@ class OvalLayer: CAShapeLayer {
   
   override init!() {
     super.init()
-    fillColor = UIColor.redColor().CGColor
-    //path = ovalPathSmall.CGPath
+    fillColor = UIColor.blackColor().CGColor
   }
   
   required init(coder aDecoder: NSCoder) {

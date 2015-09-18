@@ -20,7 +20,6 @@ class HolderView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        //self.backgroundColor = UIColor.orangeColor()
     }
     
     required init(coder aDecoder: NSCoder) {
