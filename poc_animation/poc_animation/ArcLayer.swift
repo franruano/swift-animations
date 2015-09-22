@@ -19,132 +19,133 @@ class ArcLayer: CAShapeLayer {
     
   var arcPathPre: UIBezierPath {
     var arcPath = UIBezierPath()
-    arcPath.moveToPoint(CGPoint(x: 0.0, y: squareViewSize))
-    arcPath.addLineToPoint(CGPoint(x: 0.0, y: currentTide))
+    arcPath.moveToPoint(CGPoint(x: CeroTide, y: squareViewSize))
+    arcPath.addLineToPoint(CGPoint(x: CeroTide, y: currentTide))
     arcPath.addLineToPoint(CGPoint(x: squareViewSize, y: currentTide))
     arcPath.addLineToPoint(CGPoint(x: squareViewSize, y: squareViewSize))
-    arcPath.addLineToPoint(CGPoint(x: 0.0, y: squareViewSize))
+    arcPath.addLineToPoint(CGPoint(x: CeroTide, y: squareViewSize))
     arcPath.closePath()
     return arcPath
   }
   
   var arcPathStarting: UIBezierPath {
     var arcPath = UIBezierPath()
-    arcPath.moveToPoint(CGPoint(x: 0.0, y: squareViewSize))
-    arcPath.addLineToPoint(CGPoint(x: 0.0, y: currentTide))
+    arcPath.moveToPoint(CGPoint(x: CeroTide, y: squareViewSize))
+    arcPath.addLineToPoint(CGPoint(x: CeroTide, y: currentTide))
     arcPath.addCurveToPoint(CGPoint(x: squareViewSize, y: currentTide), controlPoint1: CGPoint(x: leftPeakPoint, y: currentTide-tideLevel), controlPoint2: CGPoint(x: rightPeakPoint, y: currentTide))
     arcPath.addLineToPoint(CGPoint(x: squareViewSize, y: squareViewSize))
-    arcPath.addLineToPoint(CGPoint(x: 0.0, y: squareViewSize))
+    arcPath.addLineToPoint(CGPoint(x: CeroTide, y: squareViewSize))
     arcPath.closePath()
     return arcPath
   }
   
   var arcPathLow: UIBezierPath {
     var arcPath = UIBezierPath()
-    arcPath.moveToPoint(CGPoint(x: 0.0, y: squareViewSize))
-    arcPath.addLineToPoint(CGPoint(x: 0.0, y: currentTide - tideIncrement))
+    arcPath.moveToPoint(CGPoint(x: CeroTide, y: squareViewSize))
+    arcPath.addLineToPoint(CGPoint(x: CeroTide, y: currentTide - tideIncrement))
     arcPath.addCurveToPoint(CGPoint(x: squareViewSize, y: currentTide - tideIncrement), controlPoint1: CGPoint(x: leftPeakPoint, y: currentTide+tideLevel), controlPoint2: CGPoint(x: rightPeakPoint, y: currentTide - tideIncrement-tideLevel))
     arcPath.addLineToPoint(CGPoint(x: squareViewSize, y: squareViewSize))
-    arcPath.addLineToPoint(CGPoint(x: 0.0, y: squareViewSize))
+    arcPath.addLineToPoint(CGPoint(x: CeroTide, y: squareViewSize))
     arcPath.closePath()
     return arcPath
   }
   
+    
   var arcPathMid: UIBezierPath {
     var arcPath = UIBezierPath()
-    arcPath.moveToPoint(CGPoint(x: 0.0, y: squareViewSize))
-    arcPath.addLineToPoint(CGPoint(x: 0.0, y: 265.0))
-    arcPath.addCurveToPoint(CGPoint(x: squareViewSize, y: 265.0), controlPoint1: CGPoint(x: leftPeakPoint, y: 245.0), controlPoint2: CGPoint(x: 160.0, y: 285.0))
+    arcPath.moveToPoint(CGPoint(x: CeroTide, y: squareViewSize))
+    arcPath.addLineToPoint(CGPoint(x: CeroTide, y: currentTide-2*tideIncrement))
+    arcPath.addCurveToPoint(CGPoint(x: squareViewSize, y: currentTide-2*tideIncrement), controlPoint1: CGPoint(x: leftPeakPoint, y: currentTide-2*tideIncrement-tideLevel), controlPoint2: CGPoint(x: rightPeakPoint, y: currentTide-2*tideIncrement + tideLevel))
     arcPath.addLineToPoint(CGPoint(x: squareViewSize, y: squareViewSize))
-    arcPath.addLineToPoint(CGPoint(x: 0.0, y: squareViewSize))
+    arcPath.addLineToPoint(CGPoint(x: CeroTide, y: squareViewSize))
     arcPath.closePath()
     return arcPath
   }
   
   var arcPathHigh: UIBezierPath {
     var arcPath = UIBezierPath()
-    arcPath.moveToPoint(CGPoint(x: 0.0, y: squareViewSize))
-    arcPath.addLineToPoint(CGPoint(x: 0.0, y: 230.0))
-    arcPath.addCurveToPoint(CGPoint(x: squareViewSize, y: 230.0), controlPoint1: CGPoint(x: leftPeakPoint, y: 250.0), controlPoint2: CGPoint(x: 160.0, y: 210.0))
+    arcPath.moveToPoint(CGPoint(x: CeroTide, y: squareViewSize))
+    arcPath.addLineToPoint(CGPoint(x: CeroTide, y: currentTide-3*tideIncrement))
+    arcPath.addCurveToPoint(CGPoint(x: squareViewSize, y: currentTide-3*tideIncrement), controlPoint1: CGPoint(x: leftPeakPoint, y: currentTide-3*tideIncrement+tideLevel), controlPoint2: CGPoint(x: rightPeakPoint, y: currentTide-3*tideIncrement-tideLevel))
     arcPath.addLineToPoint(CGPoint(x: squareViewSize, y: squareViewSize))
-    arcPath.addLineToPoint(CGPoint(x: 0.0, y: squareViewSize))
+    arcPath.addLineToPoint(CGPoint(x: CeroTide, y: squareViewSize))
     arcPath.closePath()
     return arcPath
   }
     
     var arcPathHighTwo: UIBezierPath {
         var arcPath = UIBezierPath()
-        arcPath.moveToPoint(CGPoint(x: 0.0, y: squareViewSize))
-        arcPath.addLineToPoint(CGPoint(x: 0.0, y: 195.0))
-        arcPath.addCurveToPoint(CGPoint(x: squareViewSize, y: 195.0), controlPoint1: CGPoint(x: leftPeakPoint, y: 175.0), controlPoint2: CGPoint(x: 160.0, y: 215.0))
+        arcPath.moveToPoint(CGPoint(x: CeroTide, y: squareViewSize))
+        arcPath.addLineToPoint(CGPoint(x: CeroTide, y: currentTide-4*tideIncrement))
+        arcPath.addCurveToPoint(CGPoint(x: squareViewSize, y: currentTide-4*tideIncrement), controlPoint1: CGPoint(x: leftPeakPoint, y: currentTide-4*tideIncrement-tideLevel), controlPoint2: CGPoint(x: rightPeakPoint, y: currentTide-4*tideIncrement+tideLevel))
         arcPath.addLineToPoint(CGPoint(x: squareViewSize, y: squareViewSize))
-        arcPath.addLineToPoint(CGPoint(x: 0.0, y: squareViewSize))
+        arcPath.addLineToPoint(CGPoint(x: CeroTide, y: squareViewSize))
         arcPath.closePath()
         return arcPath
     }
     
     var arcPathHighThree: UIBezierPath {
         var arcPath = UIBezierPath()
-        arcPath.moveToPoint(CGPoint(x: 0.0, y: squareViewSize))
-        arcPath.addLineToPoint(CGPoint(x: 0.0, y: 160.0))
-        arcPath.addCurveToPoint(CGPoint(x: squareViewSize, y: 160.0), controlPoint1: CGPoint(x: leftPeakPoint, y: 180.0), controlPoint2: CGPoint(x: 160.0, y: 140.0))
+        arcPath.moveToPoint(CGPoint(x: CeroTide, y: squareViewSize))
+        arcPath.addLineToPoint(CGPoint(x: CeroTide, y: currentTide-5*tideIncrement))
+        arcPath.addCurveToPoint(CGPoint(x: squareViewSize, y: currentTide-5*tideIncrement), controlPoint1: CGPoint(x: leftPeakPoint, y: currentTide-5*tideIncrement+tideLevel), controlPoint2: CGPoint(x: rightPeakPoint, y: currentTide-5*tideIncrement-tideLevel))
         arcPath.addLineToPoint(CGPoint(x: squareViewSize, y: squareViewSize))
-        arcPath.addLineToPoint(CGPoint(x: 0.0, y: squareViewSize))
+        arcPath.addLineToPoint(CGPoint(x: CeroTide, y: squareViewSize))
         arcPath.closePath()
         return arcPath
     }
     
     var arcPathHighFour: UIBezierPath {
         var arcPath = UIBezierPath()
-        arcPath.moveToPoint(CGPoint(x: 0.0, y: squareViewSize))
-        arcPath.addLineToPoint(CGPoint(x: 0.0, y: 125.0))
-        arcPath.addCurveToPoint(CGPoint(x: squareViewSize, y: 125.0), controlPoint1: CGPoint(x: leftPeakPoint, y: 105.0), controlPoint2: CGPoint(x: 160.0, y: 145.0))
+        arcPath.moveToPoint(CGPoint(x: CeroTide, y: squareViewSize))
+        arcPath.addLineToPoint(CGPoint(x: CeroTide, y: currentTide-6*tideIncrement))
+        arcPath.addCurveToPoint(CGPoint(x: squareViewSize, y: currentTide-6*tideIncrement), controlPoint1: CGPoint(x: leftPeakPoint, y: currentTide-6*tideIncrement-tideLevel), controlPoint2: CGPoint(x: rightPeakPoint, y: currentTide-6*tideIncrement+tideLevel))
         arcPath.addLineToPoint(CGPoint(x: squareViewSize, y: squareViewSize))
-        arcPath.addLineToPoint(CGPoint(x: 0.0, y: squareViewSize))
+        arcPath.addLineToPoint(CGPoint(x: CeroTide, y: squareViewSize))
         arcPath.closePath()
         return arcPath
     }
     
     var arcPathHighFive: UIBezierPath {
         var arcPath = UIBezierPath()
-        arcPath.moveToPoint(CGPoint(x: 0.0, y: squareViewSize))
-        arcPath.addLineToPoint(CGPoint(x: 0.0, y: 90.0))
-        arcPath.addCurveToPoint(CGPoint(x: squareViewSize, y: 90.0), controlPoint1: CGPoint(x: leftPeakPoint, y: 110.0), controlPoint2: CGPoint(x: 160.0, y: 70.0))
+        arcPath.moveToPoint(CGPoint(x: CeroTide, y: squareViewSize))
+        arcPath.addLineToPoint(CGPoint(x: CeroTide, y: currentTide-7*tideIncrement))
+        arcPath.addCurveToPoint(CGPoint(x: squareViewSize, y: currentTide-7*tideIncrement), controlPoint1: CGPoint(x: leftPeakPoint, y: currentTide-7*tideIncrement+tideLevel), controlPoint2: CGPoint(x: rightPeakPoint, y: currentTide-7*tideIncrement-tideLevel))
         arcPath.addLineToPoint(CGPoint(x: squareViewSize, y: squareViewSize))
-        arcPath.addLineToPoint(CGPoint(x: 0.0, y: 335.0))
+        arcPath.addLineToPoint(CGPoint(x: CeroTide, y: squareViewSize))
         arcPath.closePath()
         return arcPath
     }
     
     var arcPathHighSix: UIBezierPath {
         var arcPath = UIBezierPath()
-        arcPath.moveToPoint(CGPoint(x: 0.0, y: squareViewSize))
-        arcPath.addLineToPoint(CGPoint(x: 0.0, y: 55.0))
-        arcPath.addCurveToPoint(CGPoint(x: squareViewSize, y: 55.0), controlPoint1: CGPoint(x: leftPeakPoint, y: 35.0), controlPoint2: CGPoint(x: 160.0, y: 75.0))
+        arcPath.moveToPoint(CGPoint(x: CeroTide, y: squareViewSize))
+        arcPath.addLineToPoint(CGPoint(x: CeroTide, y: currentTide-8*tideIncrement))
+        arcPath.addCurveToPoint(CGPoint(x: squareViewSize, y: currentTide-8*tideIncrement), controlPoint1: CGPoint(x: leftPeakPoint, y: currentTide-8*tideIncrement-tideLevel), controlPoint2: CGPoint(x: rightPeakPoint, y: currentTide-8*tideIncrement+tideLevel))
         arcPath.addLineToPoint(CGPoint(x: squareViewSize, y: squareViewSize))
-        arcPath.addLineToPoint(CGPoint(x: 0.0, y: squareViewSize))
+        arcPath.addLineToPoint(CGPoint(x: CeroTide, y: squareViewSize))
         arcPath.closePath()
         return arcPath
     }
     
     var arcPathHighSeven: UIBezierPath {
         var arcPath = UIBezierPath()
-        arcPath.moveToPoint(CGPoint(x: 0.0, y: squareViewSize))
-        arcPath.addLineToPoint(CGPoint(x: 0.0, y: 20.0))
-        arcPath.addCurveToPoint(CGPoint(x: squareViewSize, y: 20.0), controlPoint1: CGPoint(x: leftPeakPoint, y: 40.0), controlPoint2: CGPoint(x: 160.0, y: 0.0))
+        arcPath.moveToPoint(CGPoint(x: CeroTide, y: squareViewSize))
+        arcPath.addLineToPoint(CGPoint(x: CeroTide, y: currentTide-9*tideIncrement))
+        arcPath.addCurveToPoint(CGPoint(x: squareViewSize, y: currentTide-9*tideIncrement), controlPoint1: CGPoint(x: leftPeakPoint, y: currentTide-9*tideIncrement+tideLevel), controlPoint2: CGPoint(x: rightPeakPoint, y: CeroTide))
         arcPath.addLineToPoint(CGPoint(x: squareViewSize, y: squareViewSize))
-        arcPath.addLineToPoint(CGPoint(x: 0.0, y: squareViewSize))
+        arcPath.addLineToPoint(CGPoint(x: CeroTide, y: squareViewSize))
         arcPath.closePath()
         return arcPath
     }
   
   var arcPathComplete: UIBezierPath {
     var arcPath = UIBezierPath()
-    arcPath.moveToPoint(CGPoint(x: 0.0, y: squareViewSize))
-    arcPath.addLineToPoint(CGPoint(x: 0.0, y: 0.0))
-    arcPath.addLineToPoint(CGPoint(x: squareViewSize, y: 0.0))
+    arcPath.moveToPoint(CGPoint(x: CeroTide, y: squareViewSize))
+    arcPath.addLineToPoint(CGPoint(x: CeroTide, y: CeroTide))
+    arcPath.addLineToPoint(CGPoint(x: squareViewSize, y: CeroTide))
     arcPath.addLineToPoint(CGPoint(x: squareViewSize, y: squareViewSize))
-    arcPath.addLineToPoint(CGPoint(x: 0.0, y: squareViewSize))
+    arcPath.addLineToPoint(CGPoint(x: CeroTide, y: squareViewSize))
     arcPath.closePath()
     return arcPath
   }
@@ -153,7 +154,7 @@ class ArcLayer: CAShapeLayer {
     var arcAnimationPre: CABasicAnimation = CABasicAnimation(keyPath: "path")
     arcAnimationPre.fromValue = arcPathPre.CGPath
     arcAnimationPre.toValue = arcPathStarting.CGPath
-    arcAnimationPre.beginTime = 0.0
+    arcAnimationPre.beginTime = CeroTide
     arcAnimationPre.duration = waterDuration/1.8
     
     var arcAnimationLow: CABasicAnimation = CABasicAnimation(keyPath: "path")

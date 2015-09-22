@@ -32,6 +32,7 @@ class ViewController: UIViewController, HolderStatusDelegate {
         iconView?.center = self.view.center
         iconView?.backgroundColor = UIColor.blueColor()
         iconView?.hidden = true
+        iconView?.image = UIImage(named: "")
         self.view.addSubview(iconView!)
         
         holder = HolderView (frame: CGRect(x: (frame.width - sideLength)/2, y: (frame.height - sideLength)/2, width: sideLength, height: sideLength))
@@ -58,7 +59,8 @@ class ViewController: UIViewController, HolderStatusDelegate {
             label.textColor = UIColor.blackColor()
             label.font = UIFont.boldSystemFontOfSize(30)
             label.textAlignment = NSTextAlignment.Center
-            label.text = lblTitle
+            label.text = NSBundle.mainBundle().infoDictionary!["CFBundleName"] as? String
+
             label.transform = CGAffineTransformScale(label.transform, 0.25, 0.25)
             label.sizeToFit()
             view.addSubview(label)
@@ -70,6 +72,7 @@ class ViewController: UIViewController, HolderStatusDelegate {
             })
         }
     }
+    
     
     
     

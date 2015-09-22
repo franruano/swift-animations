@@ -45,6 +45,7 @@ let blackColor = UIColor.blackColor()
 
 /* ArcLayer */
 let initialTide = 335.0
+let CeroTide = 0.0
 let tideLevel = 20.0
 let tideIncrement = 35.0
 let leftPeakPoint = initialTide / 3
