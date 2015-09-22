@@ -2,7 +2,7 @@ import UIKit
 
 class OvalLayer: CAShapeLayer {
   
-  let animationDuration: CFTimeInterval = 0.2
+ 
     
   
   override init!() {
@@ -19,7 +19,7 @@ class OvalLayer: CAShapeLayer {
         var expandAnimation: CABasicAnimation = CABasicAnimation(keyPath: "path")
         expandAnimation.fromValue = initialOval.CGPath
         expandAnimation.toValue = finalOval.CGPath
-        expandAnimation.duration = animationDuration
+        expandAnimation.duration = circleDuration
         expandAnimation.fillMode = kCAFillModeForwards
         expandAnimation.removedOnCompletion = false
         addAnimation(expandAnimation, forKey: nil)
@@ -31,7 +31,7 @@ class OvalLayer: CAShapeLayer {
         var expandAnimation: CABasicAnimation = CABasicAnimation(keyPath: "path")
         expandAnimation.fromValue = initialOval.CGPath
         expandAnimation.toValue = finalOval.CGPath
-        expandAnimation.duration = animationDuration
+        expandAnimation.duration = circleDuration
         expandAnimation.fillMode = kCAFillModeForwards
         expandAnimation.removedOnCompletion = false
         addAnimation(expandAnimation, forKey: nil)
@@ -43,7 +43,7 @@ class OvalLayer: CAShapeLayer {
         var expandAnimation: CABasicAnimation = CABasicAnimation(keyPath: "path")
         expandAnimation.fromValue = initialOval.CGPath
         expandAnimation.toValue = finalOval.CGPath
-        expandAnimation.duration = animationDuration+0.5
+        expandAnimation.duration = circleDuration+0.5
         expandAnimation.fillMode = kCAFillModeForwards
         expandAnimation.removedOnCompletion = false
         addAnimation(expandAnimation, forKey: nil)

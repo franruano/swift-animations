@@ -3,12 +3,13 @@ import UIKit
 
 class RectangleNewLayer: CAShapeLayer {
   
-    var sideSize : CGFloat = 300.0
+    //Default size
+    var sideSize: CGFloat = 300
     
   override init!() {
     super.init()
     fillColor = UIColor.blackColor().CGColor
-    lineWidth = 7.0
+    lineWidth = squareLine
     path = rectangleLargePathFull.CGPath
   }
   
@@ -19,7 +20,7 @@ class RectangleNewLayer: CAShapeLayer {
     init (size:CGFloat) {
         super.init()
         fillColor = UIColor.clearColor().CGColor
-        lineWidth = 7.0
+        lineWidth = squareLine
         sideSize = size
         path = rectangleLargePathFull.CGPath
     }
@@ -40,7 +41,7 @@ class RectangleNewLayer: CAShapeLayer {
         var strokeAnimation: CABasicAnimation = CABasicAnimation(keyPath: "strokeEnd")
         strokeAnimation.fromValue = 0.0
         strokeAnimation.toValue = 1.0
-        strokeAnimation.duration = 0.8
+        strokeAnimation.duration = squareDuration
         addAnimation(strokeAnimation, forKey: nil)
     }
     

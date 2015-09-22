@@ -22,6 +22,9 @@ class HolderView: UIView {
     var arrOvalLayers = [OvalLayer]()
     var delegate:HolderStatusDelegate?
     
+    
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -32,7 +35,7 @@ class HolderView: UIView {
     }
     
     
-    
+    //MARK: - Draw functions
     func drawSquareWithAnimation() {
         rectangleLayer = RectangleNewLayer(size:CGFloat(self.frame.width))
         if let redRectangleLayer = rectangleLayer {
@@ -74,10 +77,9 @@ class HolderView: UIView {
         }
     }
     
-    
     func addSquareBorder() {
         if self.respondsToSelector("drawSquareWithAnimation") {
-            NSTimer.scheduledTimerWithTimeInterval(0.45, target: self, selector: "drawSquareWithAnimation", userInfo: nil, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(squareBorderAnimation, target: self, selector: "drawSquareWithAnimation", userInfo: nil, repeats: false)
         }
     }
     
@@ -86,30 +88,30 @@ class HolderView: UIView {
         arcLayer.animate()
     }
 
-    func addCircle()
-    {
+    /* Values adjusted manually to get a better visual effect */
+    func addCircle() {
         if self.respondsToSelector("drawCircleAnimation:") {
             //First round
-            NSTimer.scheduledTimerWithTimeInterval(1.45, target: self, selector: "drawCircleAnimation:", userInfo: 0, repeats: false)
+            NSTimer.scheduledTimerWithTimeInterval(circleAnimationOne, target: self, selector: "drawCircleAnimation:", userInfo: 0, repeats: false)
             //Second round
-             NSTimer.scheduledTimerWithTimeInterval(1.90, target: self, selector: "drawCircleAnimation:", userInfo: 1, repeats: false)
-             NSTimer.scheduledTimerWithTimeInterval(1.95, target: self, selector: "drawCircleAnimation:", userInfo: 2, repeats: false)
+             NSTimer.scheduledTimerWithTimeInterval(circleAnimationTwo, target: self, selector: "drawCircleAnimation:", userInfo: 1, repeats: false)
+             NSTimer.scheduledTimerWithTimeInterval(circleAnimationThree, target: self, selector: "drawCircleAnimation:", userInfo: 2, repeats: false)
             //Round 3
             var time:Double = 2.10
             for i in 3...7 {
-                let initialTime = time + 0.05 * Double(i)
+                let initialTime = time + basicIncrement * Double(i)
                  NSTimer.scheduledTimerWithTimeInterval(initialTime, target: self, selector: "drawCircleAnimation:", userInfo: i, repeats: false)
             }
             //Round 4
             time += 0.25
             for i in 8...11 {
-                let initialTime = time + 0.05 * Double(i)
+                let initialTime = time + basicIncrement * Double(i)
                 NSTimer.scheduledTimerWithTimeInterval(initialTime, target: self, selector: "drawCircleAnimation:", userInfo: i, repeats: false)
             }
             //Round 4
             time += 0.55
             for i in 12...32 {
-                let initialTime = time + 0.05 * Double(i)
+                let initialTime = time + basicIncrement * Double(i)
                 NSTimer.scheduledTimerWithTimeInterval(initialTime, target: self, selector: "drawCircleAnimation:", userInfo: i, repeats: false)
             }
         }
@@ -119,7 +121,7 @@ class HolderView: UIView {
             //Round 1
             var time: Double = 5.0
             for i in 0...6 {
-                let initialTime = time + 0.05 * Double(i)
+                let initialTime = time + basicIncrement * Double(i)
                 NSTimer.scheduledTimerWithTimeInterval(initialTime, target: self, selector: "dropCircleAnimation:", userInfo: i, repeats: false)
                 NSTimer.scheduledTimerWithTimeInterval(initialTime + offset, target: self, selector: "hideCircleAnimation:", userInfo: i, repeats: false)
             }
@@ -131,7 +133,7 @@ class HolderView: UIView {
             //Round 3
             time = 4.75
             for i in 12...17 {
-                let initialTime = time + 0.05 * Double(i)
+                let initialTime = time + basicIncrement * Double(i)
                 NSTimer.scheduledTimerWithTimeInterval(initialTime, target: self, selector: "dropCircleAnimation:", userInfo: i, repeats: false)
             }
             //Round 4
@@ -141,20 +143,19 @@ class HolderView: UIView {
             }
         }
 
-        NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: "drawArc",
+        NSTimer.scheduledTimerWithTimeInterval(waterEffectAnimation, target: self, selector: "drawArc",
             userInfo: nil, repeats: false)
         
-        NSTimer.scheduledTimerWithTimeInterval(8.0, target: self, selector: "expandView:",
+        NSTimer.scheduledTimerWithTimeInterval(expandHorizontalAnimation, target: self, selector: "expandView:",
             userInfo: false, repeats: false)
-        NSTimer.scheduledTimerWithTimeInterval(8.5, target: self, selector: "expandView:",
+        NSTimer.scheduledTimerWithTimeInterval(expandVerticalAnimation, target: self, selector: "expandView:",
             userInfo: true, repeats: false)
-        NSTimer.scheduledTimerWithTimeInterval(9.0, target: self, selector: "contractView",
+        NSTimer.scheduledTimerWithTimeInterval(contractAnimation, target: self, selector: "contractView",
             userInfo: nil, repeats: false)
     }
     
-    
     func expandView(timerIsVertical: NSTimer) {
-        backgroundColor = UIColor.blackColor()
+        backgroundColor = blackColor
         if let rectangleLayer = rectangleLayer {
 
         var frameInternal: CGRect?
@@ -174,7 +175,7 @@ class HolderView: UIView {
             
         layer.sublayers = nil
         
-        UIView.animateWithDuration(0.2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut,
+        UIView.animateWithDuration(expandDuration, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut,
             animations: {
                 if let frameInternal = frameInternal {
                     self.frame = frameInternal
@@ -199,7 +200,7 @@ class HolderView: UIView {
             
             layer.sublayers = nil
             
-            UIView.animateWithDuration(0.2, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut,
+            UIView.animateWithDuration(expandDuration, delay: 0.0, options: UIViewAnimationOptions.CurveEaseInOut,
                 animations: {
                     if let frameInternal = frameInternal {
                         self.frame = frameInternal

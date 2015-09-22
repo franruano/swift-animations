@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController, HolderStatusDelegate {
 
-    let leftPadding = CGFloat(20.0)
+    
     
     var holder: HolderView?
     var iconView: UIImageView?
@@ -42,6 +42,7 @@ class ViewController: UIViewController, HolderStatusDelegate {
         holder!.addCircle()
     }
     
+    
     //MARK: - Holder Delegate
     func animationExpanded() {
         iconView?.hidden = false
@@ -57,7 +58,7 @@ class ViewController: UIViewController, HolderStatusDelegate {
             label.textColor = UIColor.blackColor()
             label.font = UIFont.boldSystemFontOfSize(30)
             label.textAlignment = NSTextAlignment.Center
-            label.text = "My Audio Diary"
+            label.text = lblTitle
             label.transform = CGAffineTransformScale(label.transform, 0.25, 0.25)
             label.sizeToFit()
             view.addSubview(label)

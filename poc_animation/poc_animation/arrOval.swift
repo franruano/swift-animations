@@ -8,6 +8,10 @@
 
 import UIKit
 
+/*
+* Circles have been added "ramdonly" across the view
+* I added the property delay even when it hasn't been used in this version
+*/
 
 struct ovalCoordenates {
     var finalBottom = CGRect()
