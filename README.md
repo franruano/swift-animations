@@ -7,4 +7,4 @@ This project has been used as loading screen in  **[My Audio Diary](https://itun
 
 
 
-![Animacion_swift.gif](https://bitbucket.org/repo/jBjgdL/images/3914429122-Animacion_swift.gif)
+![Animacion_swift.gif](https://cloud.githubusercontent.com/assets/1830092/10029368/6579007e-6169-11e5-91ec-b209c357ad00.gif)
